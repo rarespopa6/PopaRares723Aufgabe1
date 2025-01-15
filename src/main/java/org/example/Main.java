@@ -22,6 +22,10 @@ public class Main {
         System.out.print("Enter the capacity: ");
         int capacity = scanner.nextInt();
         showGamesWithCapacity(spielOrte, capacity);
+
+        System.out.println("-------------------------------------------------");
+        System.out.println("Spiele in München nach 30.06.2024");
+        showGamesInMunichAfterDate(spielOrte, LocalDate.of(2024, 6, 30));
     }
 
     public static List<SpielOrt> getFromJsonFile() {
@@ -50,5 +54,13 @@ public class Main {
         }
     }
 
+
+    public static void showGamesInMunichAfterDate(List<SpielOrt> spielOrte, LocalDate date) {
+        for (SpielOrt ort : spielOrte) {
+            if (ort.getSpielOrt().equals("München") && ort.getDatum().isAfter(date)) {
+                System.out.println(ort.getTeam1() + " vs " + ort.getTeam2() + " in " + ort.getSpielOrt() + " am " + ort.getDatum() + " mit Kapazitat: " + ort.getKapazitat());
+            }
+        }
+    }
 
 }
