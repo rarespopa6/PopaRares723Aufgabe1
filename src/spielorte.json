@@ -1,0 +1,242 @@
+[
+  {
+    "Id": 1,
+    "Team1": "Deutschland",
+    "Team2": "Frankreich",
+    "Datum": "2024-06-14",
+    "Spielort": "München",
+    "Kapazität": "75000"
+  },
+  {
+    "Id": 2,
+    "Team1": "Spanien",
+    "Team2": "Italien",
+    "Datum": "2024-06-15",
+    "Spielort": "Berlin",
+    "Kapazität": "70000"
+  },
+  {
+    "Id": 3,
+    "Team1": "Rumänien",
+    "Team2": "Portugal",
+    "Datum": "2024-06-16",
+    "Spielort": "Hamburg",
+    "Kapazität": "60000"
+  },
+  {
+    "Id": 4,
+    "Team1": "Niederlande",
+    "Team2": "Schweiz",
+    "Datum": "2024-06-17",
+    "Spielort": "Düsseldorf",
+    "Kapazität": "54000"
+  },
+  {
+    "Id": 5,
+    "Team1": "Kroatien",
+    "Team2": "Belgien",
+    "Datum": "2024-06-18",
+    "Spielort": "Köln",
+    "Kapazität": "50000"
+  },
+  {
+    "Id": 6,
+    "Team1": "Rumänien",
+    "Team2": "Irland",
+    "Datum": "2024-06-19",
+    "Spielort": "Stuttgart",
+    "Kapazität": "58000"
+  },
+  {
+    "Id": 7,
+    "Team1": "Dänemark",
+    "Team2": "Schweden",
+    "Datum": "2024-06-20",
+    "Spielort": "Leipzig",
+    "Kapazität": "47000"
+  },
+  {
+    "Id": 8,
+    "Team1": "Polen",
+    "Team2": "Ukraine",
+    "Datum": "2024-06-21",
+    "Spielort": "Frankfurt",
+    "Kapazität": "51000"
+  },
+  {
+    "Id": 9,
+    "Team1": "Österreich",
+    "Team2": "Ungarn",
+    "Datum": "2024-06-22",
+    "Spielort": "Gelsenkirchen",
+    "Kapazität": "62000"
+  },
+  {
+    "Id": 10,
+    "Team1": "Rumänien",
+    "Team2": "Tschechien",
+    "Datum": "2024-06-23",
+    "Spielort": "Hannover",
+    "Kapazität": "49000"
+  },
+  {
+    "Id": 11,
+    "Team1": "Deutschland",
+    "Team2": "England",
+    "Datum": "2024-06-24",
+    "Spielort": "München",
+    "Kapazität": "75000"
+  },
+  {
+    "Id": 12,
+    "Team1": "Spanien",
+    "Team2": "Portugal",
+    "Datum": "2024-06-25",
+    "Spielort": "Berlin",
+    "Kapazität": "70000"
+  },
+  {
+    "Id": 13,
+    "Team1": "Frankreich",
+    "Team2": "Rumänien",
+    "Datum": "2024-06-26",
+    "Spielort": "Hamburg",
+    "Kapazität": "60000"
+  },
+  {
+    "Id": 14,
+    "Team1": "Niederlande",
+    "Team2": "Kroatien",
+    "Datum": "2024-06-27",
+    "Spielort": "Düsseldorf",
+    "Kapazität": "54000"
+  },
+  {
+    "Id": 15,
+    "Team1": "Belgien",
+    "Team2": "Schweiz",
+    "Datum": "2024-06-28",
+    "Spielort": "Köln",
+    "Kapazität": "50000"
+  },
+  {
+    "Id": 16,
+    "Team1": "Schottland",
+    "Team2": "Dänemark",
+    "Datum": "2024-06-29",
+    "Spielort": "Stuttgart",
+    "Kapazität": "58000"
+  },
+  {
+    "Id": 17,
+    "Team1": "Rumänien",
+    "Team2": "Schweden",
+    "Datum": "2024-06-30",
+    "Spielort": "Leipzig",
+    "Kapazität": "47000"
+  },
+  {
+    "Id": 18,
+    "Team1": "Polen",
+    "Team2": "Österreich",
+    "Datum": "2024-07-01",
+    "Spielort": "Frankfurt",
+    "Kapazität": "51000"
+  },
+  {
+    "Id": 19,
+    "Team1": "Ungarn",
+    "Team2": "Ukraine",
+    "Datum": "2024-07-02",
+    "Spielort": "Gelsenkirchen",
+    "Kapazität": "62000"
+  },
+  {
+    "Id": 20,
+    "Team1": "Serbien",
+    "Team2": "Spanien",
+    "Datum": "2024-07-03",
+    "Spielort": "Hannover",
+    "Kapazität": "49000"
+  },
+  {
+    "Id": 21,
+    "Team1": "Deutschland",
+    "Team2": "Frankreich",
+    "Datum": "2024-07-04",
+    "Spielort": "München",
+    "Kapazität": "75000"
+  },
+  {
+    "Id": 22,
+    "Team1": "Rumänien",
+    "Team2": "Portugal",
+    "Datum": "2024-07-05",
+    "Spielort": "Berlin",
+    "Kapazität": "70000"
+  },
+  {
+    "Id": 23,
+    "Team1": "Belgien",
+    "Team2": "Tschechien",
+    "Datum": "2024-07-06",
+    "Spielort": "Hamburg",
+    "Kapazität": "60000"
+  },
+  {
+    "Id": 24,
+    "Team1": "Niederlande",
+    "Team2": "Dänemark",
+    "Datum": "2024-07-07",
+    "Spielort": "Düsseldorf",
+    "Kapazität": "54000"
+  },
+  {
+    "Id": 25,
+    "Team1": "Kroatien",
+    "Team2": "Rumänien",
+    "Datum": "2024-07-08",
+    "Spielort": "Köln",
+    "Kapazität": "50000"
+  },
+  {
+    "Id": 26,
+    "Team1": "Österreich",
+    "Team2": "Schottland",
+    "Datum": "2024-07-09",
+    "Spielort": "Stuttgart",
+    "Kapazität": "58000"
+  },
+  {
+    "Id": 27,
+    "Team1": "Schweden",
+    "Team2": "Polen",
+    "Datum": "2024-07-10",
+    "Spielort": "Leipzig",
+    "Kapazität": "47000"
+  },
+  {
+    "Id": 28,
+    "Team1": "Ukraine",
+    "Team2": "Ungarn",
+    "Datum": "2024-07-11",
+    "Spielort": "Frankfurt",
+    "Kapazität": "51000"
+  },
+  {
+    "Id": 29,
+    "Team1": "Rumänien",
+    "Team2": "Frankreich",
+    "Datum": "2024-07-12",
+    "Spielort": "Gelsenkirchen",
+    "Kapazität": "62000"
+  },
+  {
+    "Id": 30,
+    "Team1": "Deutschland",
+    "Team2": "Rumänien",
+    "Datum": "2024-07-13",
+    "Spielort": "München",
+    "Kapazität": "75000"
+  }
+]
