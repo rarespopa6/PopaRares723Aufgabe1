@@ -18,7 +18,10 @@ public class Main {
             System.out.println(ort);
         }
 
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the capacity: ");
+        int capacity = scanner.nextInt();
+        showGamesWithCapacity(spielOrte, capacity);
     }
 
     public static List<SpielOrt> getFromJsonFile() {
@@ -37,6 +40,14 @@ public class Main {
         }
 
         return data;
+    }
+
+    public static void showGamesWithCapacity(List<SpielOrt> spielOrte, int capacity) {
+        for (SpielOrt ort : spielOrte) {
+            if (ort.getKapazitat() >= capacity) {
+                System.out.println(ort.getTeam1() + " vs " + ort.getTeam2() + " in " + ort.getSpielOrt() + " am " + ort.getDatum() + " mit Kapazitat: " + ort.getKapazitat());
+            }
+        }
     }
 
 
