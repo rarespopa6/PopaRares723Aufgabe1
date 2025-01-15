@@ -32,6 +32,10 @@ public class Main {
         System.out.println("Spiele pro Stadt in spielanzahl.txt geschrieben");
     }
 
+    /**
+     * Read data from JSON file
+     * @return List of SpielOrt objects
+     */
     public static List<SpielOrt> getFromJsonFile() {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(LocalDate.class, new LocalDateJson()) // adaptor LocalDate JSON
@@ -50,6 +54,11 @@ public class Main {
         return data;
     }
 
+    /**
+     * Show games with capacity greater or equal to the given capacity
+     * @param spielOrte List of SpielOrt objects
+     * @param capacity Capacity to compare
+     */
     public static void showGamesWithCapacity(List<SpielOrt> spielOrte, int capacity) {
         for (SpielOrt ort : spielOrte) {
             if (ort.getKapazitat() >= capacity) {
@@ -58,7 +67,11 @@ public class Main {
         }
     }
 
-
+    /**
+     * Show games in Munich after the given date
+     * @param spielOrte List of SpielOrt objects
+     * @param date Date to compare
+     */
     public static void showGamesInMunichAfterDate(List<SpielOrt> spielOrte, LocalDate date) {
         for (SpielOrt ort : spielOrte) {
             if (ort.getSpielOrt().equals("München") && ort.getDatum().isAfter(date)) {
@@ -67,6 +80,11 @@ public class Main {
         }
     }
 
+    /**
+     * Count the number of games per city
+     * @param spielOrte List of SpielOrt objects
+     * @return Map with the number of games per city
+     */
     private static Map<String, Integer> countNumberOfGamesPerCity(List<SpielOrt> spielOrte) {
         Map<String, Integer> spielOrtMap = new HashMap<>();
         for (SpielOrt spielOrt : spielOrte) {
@@ -76,6 +94,11 @@ public class Main {
         return spielOrtMap;
     }
 
+    /**
+     * Sort the number of games per city
+     * @param spielOrtMap Map with the number of games per city
+     * @return List of Maps with the sorted number of games per city
+     */
     private static List<Map<String, Integer>> sortNumberOfGamesPerCity(Map<String, Integer> spielOrtMap) {
         List<Map<String, Integer>> sortedList = new ArrayList<>();
         spielOrtMap.entrySet().stream()
@@ -85,6 +108,9 @@ public class Main {
         return sortedList;
     }
 
+    /**
+     * Write the number of games per city to a file
+     */
     public static void writeToFileNumberOfGamesPerCity() {
         Map<String, Integer> spielOrtMap = countNumberOfGamesPerCity(getFromJsonFile());
         List<Map<String, Integer>> sortedList = sortNumberOfGamesPerCity(spielOrtMap);

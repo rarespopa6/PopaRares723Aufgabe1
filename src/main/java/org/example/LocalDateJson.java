@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Class to serialize and deserialize LocalDate objects
+ */
 public class LocalDateJson extends TypeAdapter<LocalDate> {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 

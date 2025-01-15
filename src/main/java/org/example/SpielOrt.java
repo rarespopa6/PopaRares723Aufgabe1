@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.time.LocalDate;
 
+/**
+ * Class that represents a SpielOrt.
+ */
 public class SpielOrt {
     @SerializedName("Id")
     private int id;
