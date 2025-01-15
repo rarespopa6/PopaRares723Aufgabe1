@@ -26,6 +26,10 @@ public class Main {
         System.out.println("-------------------------------------------------");
         System.out.println("Spiele in München nach 30.06.2024");
         showGamesInMunichAfterDate(spielOrte, LocalDate.of(2024, 6, 30));
+
+        System.out.println("-------------------------------------------------");
+        writeToFileNumberOfGamesPerCity();
+        System.out.println("Spiele pro Stadt in spielanzahl.txt geschrieben");
     }
 
     public static List<SpielOrt> getFromJsonFile() {
@@ -59,6 +63,49 @@ public class Main {
         for (SpielOrt ort : spielOrte) {
             if (ort.getSpielOrt().equals("München") && ort.getDatum().isAfter(date)) {
                 System.out.println(ort.getTeam1() + " vs " + ort.getTeam2() + " in " + ort.getSpielOrt() + " am " + ort.getDatum() + " mit Kapazitat: " + ort.getKapazitat());
+            }
+        }
+    }
+
+    private static Map<String, Integer> countNumberOfGamesPerCity(List<SpielOrt> spielOrte) {
+        Map<String, Integer> spielOrtMap = new HashMap<>();
+        for (SpielOrt spielOrt : spielOrte) {
+            spielOrtMap.put(spielOrt.getSpielOrt(), spielOrtMap.getOrDefault(spielOrt.getSpielOrt(), 0) + 1);
+        }
+
+        return spielOrtMap;
+    }
+
+    private static List<Map<String, Integer>> sortNumberOfGamesPerCity(Map<String, Integer> spielOrtMap) {
+        List<Map<String, Integer>> sortedList = new ArrayList<>();
+        spielOrtMap.entrySet().stream()
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed().thenComparing(Map.Entry.comparingByKey()))
+                .forEachOrdered(x -> sortedList.add(Collections.singletonMap(x.getKey(), x.getValue())));
+
+        return sortedList;
+    }
+
+    public static void writeToFileNumberOfGamesPerCity() {
+        Map<String, Integer> spielOrtMap = countNumberOfGamesPerCity(getFromJsonFile());
+        List<Map<String, Integer>> sortedList = sortNumberOfGamesPerCity(spielOrtMap);
+
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter("spielanzahl.txt"));
+            for (Map<String, Integer> map : sortedList) {
+                for (Map.Entry<String, Integer> entry : map.entrySet()) {
+                    writer.write(entry.getKey() + "%" + entry.getValue() + "\n");
+                }
+            }
+        }   catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            }catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
